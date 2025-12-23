@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: all;
+}
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100vh;
+    background-color: var(
+      --color-base-100
+    ); /* DaisyUI variable for theme background */
+  }
+  body {
+    margin: 0;
+  }
+}
