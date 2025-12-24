@@ -295,7 +295,13 @@ const ChatContainer = ({ call }) => {
               </time>
             </div>
 
-            <div className="chat-bubble flex flex-col">
+            <div
+              className={`chat-bubble flex flex-col ${
+                message.senderId === authUser._id
+                  ? "bg-primary text-primary-content"
+                  : "bg-base-200 text-base-content"
+              }`}
+            >
               {message.image && (
                 <img
                   src={message.image}
