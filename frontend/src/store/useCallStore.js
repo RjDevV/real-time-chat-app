@@ -8,7 +8,7 @@ export const useCallStore = create((set) => ({
     fetchCalls: async () => {
         try {
             set({ loading: true });
-            const res = await axiosInstance.get("/calls");
+            const res = await axiosInstance.get("/api/calls");
 
             set((state) => ({
                 calls: [
