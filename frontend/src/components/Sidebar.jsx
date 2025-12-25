@@ -124,8 +124,11 @@ const Sidebar = () => {
             <span className="text-sm">Show online only</span>
           </label>
           <span className="text-xs text-zinc-500">
-            ({onlineUsers?.filter((id) => id !== authUser?._id).length ?? 0}{" "}
-            online)
+            {authUser
+              ? `(${
+                  onlineUsers.filter((id) => id !== authUser._id).length
+                } online)`
+              : "(0 online)"}
           </span>
         </div>
       </div>
