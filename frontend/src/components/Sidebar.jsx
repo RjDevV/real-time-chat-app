@@ -3,6 +3,7 @@ import { useChatStore } from "../store/useChatStore";
 import { useAuthStore } from "../store/useAuthStore";
 import SidebarSkeleton from "./skeletons/SidebarSkeleton";
 import { Users, Phone, MessageCircle, Search } from "lucide-react";
+import { axiosInstance } from "../lib/axios";
 
 import CallLogList from "./CallLogList";
 import useCall from "../hooks/useCall";
@@ -46,14 +47,11 @@ const Sidebar = () => {
     setSearchResult(null);
 
     try {
-      const res = await fetch(
-        `http://localhost:5001/api/users/search?username=${username}`,
-        {
-          credentials: "include",
-        }
+      const res = await axiosInstance.get(
+        `/api/users/search?username=${username}`
       );
 
-      const data = await res.json();
+      const data = res.data;
 
       if (Array.isArray(data) && data.length === 1) {
         setSearchResult(data[0]);
