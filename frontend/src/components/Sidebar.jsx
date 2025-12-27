@@ -21,7 +21,7 @@ const Sidebar = () => {
 
   const { authUser, onlineUsers } = useAuthStore();
 
-  const [showOnlineOnly, setShowOnlineOnly] = useState(false);
+  // const [showOnlineOnly, setShowOnlineOnly] = useState(false);
   const [activeTab, setActiveTab] = useState("chats");
 
   const [searchInput, setSearchInput] = useState("");
@@ -78,9 +78,9 @@ const Sidebar = () => {
     };
   }, [subscribeToMessages, unsubscribeFromMessages]);
 
-  const filteredUsers = showOnlineOnly
-    ? contacts.filter((u) => onlineUsers.includes(u._id))
-    : contacts;
+  // const filteredUsers = showOnlineOnly
+  //   ? contacts.filter((u) => onlineUsers.includes(u._id))
+  //   : contacts;
 
   if (isContactsLoading) return <SidebarSkeleton />;
 
@@ -113,7 +113,7 @@ const Sidebar = () => {
         </div>
 
         {/* Online filter */}
-        <div className="mt-3 hidden lg:flex items-center gap-2">
+        {/* <div className="mt-3 hidden lg:flex items-center gap-2">
           <label className="cursor-pointer flex items-center gap-2">
             <input
               type="checkbox"
@@ -130,7 +130,7 @@ const Sidebar = () => {
                 } online)`
               : "(0 online)"}
           </span>
-        </div>
+        </div> */}
       </div>
 
       {/* ================= TABS ================= */}
@@ -201,7 +201,7 @@ const Sidebar = () => {
                 Search users to start chatting
               </div>
             ) : (
-              filteredUsers.map((user) => (
+              contacts.map((user) => (
                 <button
                   key={user._id}
                   onClick={() => setSelectedUser(user)}
