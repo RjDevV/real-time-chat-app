@@ -80,9 +80,4 @@ Frontend setup:
 * Optimized REST APIs (~25% improvement)
 * Scalable MERN architecture
 
----
 
-## 📬 Contact
-
-Ranjan Singh
-[ranjansingh@gmail.com](mailto:ranjansingh@gmail.com)
