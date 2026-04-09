@@ -21,6 +21,19 @@ https://real-time-chat-app-fawn-alpha.vercel.app/
 
 ---
 
+## 📸 Screenshots
+
+### 💬 Chat Interface
+![Chat](./projectimg_2.png)
+
+### 🔐 Login Page
+![Login](./projectimg_1.png)
+
+### ⚙️ Settings Page
+![Settings](./projectimg_3.png)
+
+---
+
 ## 🛠️ Tech Stack
 
 Frontend:
