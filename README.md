@@ -59,17 +59,17 @@ Real-time:
 ## ⚙️ Installation & Setup
 
 Clone the repository:
-git clone https://github.com/RjDevV/real-time-chat-app.git
+* git clone https://github.com/RjDevV/real-time-chat-app.git
 
 Backend setup:
-cd backend
-npm install
-npm start
+* cd backend
+* npm install
+* npm start
 
 Frontend setup:
-cd frontend
-npm install
-npm run dev
+* cd frontend
+* npm install
+* npm run dev
 
 ---
 
